@@ -35,8 +35,18 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+vim.keymap.set('n', '<Up>', ':resize -2<CR>', { desc = 'resize window up' })
+vim.keymap.set('n', '<Down>', ':resize +2<CR>', { desc = 'resize window down' })
+vim.keymap.set('n', '<Left>', ':vertical resize -2<CR>', { desc = 'resize window left' })
+vim.keymap.set('n', '<Right>', ':vertical resize +2<CR>', { desc = 'resize window right' })
+
 -- Save file
 vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', { desc = 'Save file' })
 
 -- delete single charactere without copying it.
 vim.keymap.set('n', 'x', '"_x', { desc = 'Delete single char withiut copy' })
+
+vim.keymap.set('v', '<', '<gv', { desc = 'Stay in indent mode' })
+vim.keymap.set('v', '>', '>gv', { desc = 'Stay in indent mode' })
+
+vim.keymap.set('v', 'p', '"_dP"', { desc = 'Prevent replacing when yanking' })
