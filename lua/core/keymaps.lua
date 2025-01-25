@@ -51,6 +51,6 @@ vim.keymap.set('v', '>', '>gv', { desc = 'Stay in indent mode' })
 
 vim.keymap.set('v', 'p', '"_dP"', { desc = 'Prevent replacing when yanking' })
 
-vim.keymap.set('n', '<leader>n', ':bp<cr>')
-vim.keymap.set('n', '<leader>p', ':bn<cr>')
+vim.keymap.set('n', '<leader>n', ':bn<cr>')
+vim.keymap.set('n', '<leader>p', ':bp<cr>')
 vim.keymap.set('n', '<leader>x', ':bd<cr>')
