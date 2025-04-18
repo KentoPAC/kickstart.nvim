@@ -1,3 +1,20 @@
+vim.g.clipboard = {
+  name = 'win32yank',
+  copy = {
+    ['+'] = 'win32yank.exe -i --crlf',
+    ['*'] = 'win32yank.exe -i --crlf',
+  },
+  paste = {
+    ['+'] = 'win32yank.exe -o --lf',
+    ['*'] = 'win32yank.exe -o --lf',
+  },
+  cache_enabled = 0, -- Désactive le cache pour une synchronisation plus fiable
+}
+
+vim.opt.clipboard = 'unnamedplus'
+
+--
+--
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 vim.g['db#adapter#mongo#client'] = 'mongosh'

@@ -181,6 +181,8 @@ return {
       -- ts_ls = {},
       --
 
+      vhdl_ls = {},
+
       lua_ls = {
         -- cmd = { ... },
         -- filetypes = { ... },
