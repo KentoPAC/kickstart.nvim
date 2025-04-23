@@ -95,3 +95,24 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+  
+-- Auto-indent Python files on save: reindent buffer before formatting
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'python',
+  callback = function()
+    -- PEP8: 4 spaces
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop    = 4
+    vim.opt_local.expandtab  = true
+
+    -- Before saving, reindent entire buffer, preserving cursor
+    vim.api.nvim_create_autocmd('BufWritePre', {
+      buffer = 0,
+      callback = function()
+        local view = vim.fn.winsaveview()
+        vim.cmd('silent! normal! gg=G')
+        vim.fn.winrestview(view)
+      end,
+    })
+  end,
+})
