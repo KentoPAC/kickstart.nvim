@@ -50,7 +50,6 @@ vim.keymap.set('v', '<', '<gv', { desc = 'Stay in indent mode' })
 vim.keymap.set('v', '>', '>gv', { desc = 'Stay in indent mode' })
 
 vim.keymap.set('v', 'p', '"_dP"', { desc = 'Prevent replacing when yanking' })
-
-vim.keymap.set('n', '<leader>n', ':bn<cr>')
-vim.keymap.set('n', '<leader>p', ':bp<cr>')
-vim.keymap.set('n', '<leader>x', ':bd<cr>')
+vim.keymap.set('n', '<leader>n', ':bn<cr>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<leader>p', ':bp<cr>', { desc = 'Previous buffer' })
+vim.keymap.set('n', '<leader>x', ':bd<cr>', { desc = 'Close buffer' })
