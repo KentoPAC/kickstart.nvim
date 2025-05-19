@@ -49,8 +49,12 @@ return {
       question_header = '## User ',
       answer_header = '## Copilot ',
       error_header = '## Error ',
+      show_diff = {
+        full_diff = true,
+      },
       prompts = prompts,
-      model = 'claude-3.5-sonnet',
+      model = 'claude-3.7-sonnet',
+      language = 'fr', -- Définir le français comme langue par défaut
       mappings = {
         -- Use tab for completion
         complete = {
